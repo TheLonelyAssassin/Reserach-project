@@ -4,7 +4,7 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 os.environ["ALBUMENTATIONS_DISABLE_VERSION_CHECK"] = "1"
 warnings.filterwarnings("ignore", category=UserWarning, module=r"albumentations\.check_version")
 from pathlib import Path
-from patch_dual_stream_extra import AIAF_Tiny
+from aiaf import AIAF_Tiny
 import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 from torch.utils.data import DataLoader, Subset
@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
 from rich.progress import Progress, TextColumn, BarColumn, TimeElapsedColumn, TimeRemainingColumn, MofNCompleteColumn
 from iresnet_arcface import iresnet100
-from attack_wrappers_Copy import MaskOverlay, FastAttackMixer,PGDAttack,CWAWrapper,AdvPatchWrapper
+from attack_wrappers import MaskOverlay, FastAttackMixer,PGDAttack,CWAWrapper,AdvPatchWrapper
 
 torch.set_float32_matmul_precision("high")
 torch.backends.cuda.matmul.allow_tf32 = True
@@ -868,4 +868,5 @@ def main():
         print("=" * 80)
 if __name__ == "__main__":
     torch.multiprocessing.set_start_method('spawn', force=True)
+
     main()
