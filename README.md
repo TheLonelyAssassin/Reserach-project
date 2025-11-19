@@ -141,7 +141,8 @@ aiaf-defense/
 ├── iresnet_arcface.py       # Face recognition backbone 
 ├── aiaf.py                  # AIAF (Tiny & Stable)
 ├── attack_wrappers.py       # Attack implementations
-├── environment.yml               # Conda environment file     
+├── environment.yml             # Conda environment file
+├── best_identity.pth         #best saved model           
 └── README.md                        
 ```
 
