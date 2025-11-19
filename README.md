@@ -23,8 +23,7 @@ AIAF is a plug-and-play defense mechanism that protects face recognition systems
 - **Python**: 3.10
 - **GPU**: NVIDIA GPU with 8GB+ VRAM (tested on RTX 4070)
 - **CUDA**: 12.1
-- **OS**: Windows or Linux
-- **Conda**: Anaconda or Miniconda
+- **OS**: Windows
 
 ---
 
